@@ -1,0 +1,11 @@
+--- languages/messages/MessagesEn.php.dist	2012-12-04 16:07:30.000000000 -0500
++++ languages/messages/MessagesEn.php	2014-02-21 13:39:25.787656484 -0500
+@@ -1083,7 +1083,7 @@
+ 'nav-login-createaccount'    => 'Log in / create account',
+ 'loginprompt'                => 'You must have cookies enabled to log in to {{SITENAME}}.',
+ 'userlogin'                  => 'Log in / create account',
+-'userloginnocreate'          => 'Log in',
++'userloginnocreate'          => 'Logged in',
+ 'logout'                     => 'Log out',
+ 'userlogout'                 => 'Log out',
+ 'userlogout-summary'         => '', # do not translate or duplicate this message to other languages

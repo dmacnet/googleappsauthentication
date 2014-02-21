@@ -56,7 +56,9 @@ function fnGoogleAppsAuthenticateHook($user, &$result)
                         $googleAccount = getGoogleAccount('title=' . $_REQUEST["title"]);
  
                         // Get username
-                        $username = $googleAccount['email'];
+			// http://www.mediawiki.org/wiki/Extension_talk:GoogleAppsAuthentification
+			// $username = $googleAccount['email'];
+			$username = preg_replace('/@.*/', '', $googleAccount['email']);
  
                         // Get MediaWiki user
                         $u = User::newFromName($username);

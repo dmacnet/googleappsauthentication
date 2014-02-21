@@ -1,0 +1,17 @@
+--- ../../includes/specials/SpecialUserlogin.php.dist	2012-12-04 16:07:30.000000000 -0500
++++ ../../includes/specials/SpecialUserlogin.php	2014-02-20 13:22:49.905567019 -0500
+@@ -168,6 +168,14 @@
+ 				return;
+ 			}
+ 		}
++
++		/* http://stackoverflow.com/questions/18536237/mediawiki-extension-googleappsauthentification-can-not-sign-in-after-googles-r */
++		// additional for Google login
++		if ( ( 'submitlogin' == $this->mAction ) && !empty($_GET['janrain_nonce']) ) {
++			$this->processLogin();
++			return;
++		}
++
+ 		$this->mainLoginForm( '' );
+ 	}
+ 
